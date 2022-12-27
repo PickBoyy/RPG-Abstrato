@@ -1,4 +1,4 @@
-import {D4,D8,D10,D20 } from './dados'
+import * as dice from './dices'
 import {IArma} from '../Outros/ModelsTs/ModelosDeArmas'
 import {IPersonagem} from '../Outros/ModelsTs/ModeloDePersonagem'
 import { IMonstro } from '../Outros/ModelsTs/ModeloDeMonstros'
@@ -7,7 +7,7 @@ export function Ataque(Atacante:IPersonagem|IMonstro, Alvo:IMonstro|IPersonagem)
 
     
     console.log(`${Atacante.nome} vai desferir um ataque em ${Alvo.nome}`)
-    var d20 = D20()
+    var d20 = dice.D20()
      var ataque = d20 + Atacante.modforca
     
     if(d20 == 20) {

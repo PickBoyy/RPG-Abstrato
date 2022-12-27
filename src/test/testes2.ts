@@ -1,25 +1,25 @@
-import Personagem from '../Models/Personagem'
+import Character from '../Models/character'
 import { EspadaLonga,Machado } from '../repositorios/RespositorioDeArmas/Armas'
 
-const Emilly = new Personagem ({
-    nomeDoJogador:'Emilly',
-    nome:'Emy',
-    raca:'humano',
-    classe:'barbaro',
-    nivel:1,
-    experiencia:0,
-    forca:15,
-    destreza:16,
-    constituicao:14,
-    inteligencia: 6,
-    sabedoria: 5,
-    carisma:10,
-    arma:Machado}) 
+const Emilly = new Character ({
+    playerName:'Emilly',
+    name:'Emy',
+    race:'humano',
+    class:'barbaro',
+    level:1,
+    experience:0,
+    strength:15,
+    dextery:16,
+    constitution:14,
+    intelligence: 6,
+    wisdom: 5,
+    charisma:10,
+    weapon:Machado}) 
  
 export async function savePerson(){
     try{
        await Emilly.save()
        console.log('Salvo com sucesso!')
     }catch(err){console.log(err)}
-    }
+}
     

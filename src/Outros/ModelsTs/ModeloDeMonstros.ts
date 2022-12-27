@@ -1,4 +1,4 @@
-import {D4,D8,D10,D20 } from '../../scripts/dados'
+import {D4,D8,D10,D20 } from '../../scripts/dices'
 import {IArma} from './ModelosDeArmas'
 
 

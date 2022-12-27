@@ -1,6 +1,6 @@
 //                                                 IMPORT'S!
 //=====================================================================================================//
-import { D20 } from './dados';
+
 import {IPersonagem, Personagem} from '../Outros/ModelsTs/ModeloDePersonagem'
 import { IMonstro,Monstro } from '../Outros/ModelsTs/ModeloDeMonstros';
 import {Ataque} from  './ataque'

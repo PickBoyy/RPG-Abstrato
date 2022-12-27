@@ -1,7 +1,7 @@
 //============================|(IMPORT'S)|=====================================//
 import { Router } from "express"
 import express, { Request, Response }  from "express";
-import controllerRoutes from "../controllers/controllerRoutes";
+import * as characterController from '../Controllers/characterControllers'
 import multer from "multer";
 //============================|(Const's)|=====================================//
 const upload = multer()
@@ -12,12 +12,13 @@ routes.get('/',(req:Request, res:Response) =>{
     res.json({message:`Seja bem vindo novamente ${Deus}`})
 })
 //============================|(Rotas)|=====================================//
-routes.get('/personagens', controllerRoutes.getAllPerson);
-routes.post('/create', upload.none(), controllerRoutes.newPerson);
-routes.delete('/deleteall', controllerRoutes.deleteAllPerson);
+routes.get('/personagens', characterController.getAllCharacters);
+routes.post('/create', upload.none(), characterController.newCharacter);
+routes.delete('/deleteall', characterController.deleteAllCharacter);
 
- routes.get('/personagem/:nome', controllerRoutes.getOnePerson);
- routes.delete('/delete/:nome', controllerRoutes.deleteOnePerson);
-//  routes.put('/personagem/:nome', controllerRoutes.updatePerson);
+ routes.get('/personagem/:nome', characterController.getOneCharacter);
+ routes.delete('/delete/:nome', characterController.deleteOneCharacter);
+//  routes.put('/personagem/:nome', controllerRoutes.updateCharacter);
+
 //--------------------------------------------------------------------------//
 export default routes     // exportando rotas por padrão.

@@ -18,7 +18,7 @@ export interface ICharacter {
     //
     hit_points:number;
     armor_class:number;
-    weapon: IArma | null
+    weapon?: IArma | null
 }
 
 const characterSchema = new mongoose.Schema<ICharacter>({
